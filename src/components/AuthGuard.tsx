@@ -17,11 +17,11 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
                 setIsAuthenticated(true);
             } else {
                 // Invalid hash, redirect
-                window.location.href = "/login";
+                window.location.href = `${import.meta.env.BASE_URL}login`;
             }
         } else {
             // No cookie, redirect
-            window.location.href = "/login";
+            window.location.href = `${import.meta.env.BASE_URL}login`;
         }
         setIsLoading(false);
     }, []);

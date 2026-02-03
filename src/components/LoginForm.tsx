@@ -16,7 +16,7 @@ export default function LoginForm() {
         if (authCookie) {
             const hash = authCookie.split('=')[1];
             if (hash === TARGET_HASH) {
-                window.location.href = "/";
+                window.location.href = import.meta.env.BASE_URL;
             }
         }
     }, []);
@@ -32,7 +32,7 @@ export default function LoginForm() {
             document.cookie = `site_auth=${hash};expires=${d.toUTCString()};path=/;SameSite=Strict`;
 
             // Redirect to home
-            window.location.href = "/";
+            window.location.href = import.meta.env.BASE_URL;
         } else {
             setError(true);
         }
