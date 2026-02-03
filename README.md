@@ -24,7 +24,7 @@ Questo è un template base per siti Astro, creato a partire dal progetto "Daivai
 3. Modifica la password:
    - Vai in `src/components/PasswordGate.tsx`.
    - Modifica `TARGET_HASH` con l'hash SHA256 della tua nuova password.
-   - La password attuale di default è: `password`.
+   - La password attuale è stata modificata (vedi hash nel codice).
 
 4. Configura per GitHub Pages:
    - Modifica `astro.config.mjs` decommentando e impostando `site` e `base`.
