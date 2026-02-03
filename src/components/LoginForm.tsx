@@ -67,6 +67,7 @@ export default function LoginForm() {
                     Accedi
                 </button>
             </form>
+            <p className="version-tag">v1.1 - Secure</p>
         </div>
     );
 }
