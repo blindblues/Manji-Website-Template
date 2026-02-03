@@ -16,7 +16,8 @@ export default function LoginForm() {
         if (authCookie) {
             const hash = authCookie.split('=')[1];
             if (hash === TARGET_HASH) {
-                window.location.href = import.meta.env.BASE_URL;
+                const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+                window.location.href = base;
             }
         }
     }, []);
