@@ -1,0 +1,18 @@
+---
+import LoginForm from "../components/LoginForm";
+import "../styles/login.css";
+
+// Questa pagina gestisce l'accesso e usa stili dedicati (login.css)
+---
+
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Accesso Richiesto</title>
+    </head>
+    <body class="login-page">
+        <LoginForm client:only="react" />
+    </body>
+</html>

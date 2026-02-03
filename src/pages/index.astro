@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AuthGuard from "../components/AuthGuard";
+
+// Welcome to your new generic template!
+// This page is protected by the AuthGuard component.
+---
+
+<Layout title="Nuovo Progetto">
+    <AuthGuard client:only="react">
+        <main>
+            <h1>Benvenuto nel Template</h1>
+            <p>Questo è un template vuoto basato su Astro.</p>
+            <ul>
+                <li>
+                    Modifica <code>src/pages/index.astro</code> per cambiare questo
+                    contenuto.
+                </li>
+                <li>
+                    La password di default è <strong>password</strong>. Modifica <code
+                        >src/components/AuthGuard.tsx</code
+                    > e <code>src/components/LoginForm.tsx</code> per cambiarla.
+                </li>
+            </ul>
+        </main>
+    </AuthGuard>
+</Layout>
+
+<style>
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: black; /* Or variable from global.css */
+        font-size: 20px;
+        line-height: 1.6;
+        padding-top: 5rem;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+</style>

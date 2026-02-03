@@ -1,0 +1,80 @@
+/* Stili dedicati alla pagina di login/password */
+body.login-page {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-title {
+    margin: 0 0 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-label {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.password-input {
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.password-input:focus {
+    outline: 2px solid #FB6068;
+    border-color: transparent;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.submit-button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #FB6068;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+}
