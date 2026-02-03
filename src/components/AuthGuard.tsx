@@ -17,11 +17,14 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
                 setIsAuthenticated(true);
             } else {
                 // Invalid hash, redirect
-                window.location.href = `${import.meta.env.BASE_URL}login`;
+                // Ensure slash is added if missing
+                const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+                window.location.href = `${base}login`;
             }
         } else {
             // No cookie, redirect
-            window.location.href = `${import.meta.env.BASE_URL}login`;
+            const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+            window.location.href = `${base}login`;
         }
         setIsLoading(false);
     }, []);
