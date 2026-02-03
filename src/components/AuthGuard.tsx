@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Default password hash for "password"
-const TARGET_HASH = "41c3590faa62584ea51ca3f22f2c8255d67d311835d1a77452e34e5fe4433c4f";
+const TARGET_HASH = "41c3590faa62584ea51ca3f22f2c8255d67d311835d1a77452e34e5fe433c4ff";
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {
     const [isAuthenticated, setIsAuthenticated] = useState(false);

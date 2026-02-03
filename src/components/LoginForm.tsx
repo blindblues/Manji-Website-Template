@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CryptoJS from 'crypto-js';
 
 // Default password hash for "password"
-const TARGET_HASH = "41c3590faa62584ea51ca3f22f2c8255d67d311835d1a77452e34e5fe4433c4f";
+const TARGET_HASH = "41c3590faa62584ea51ca3f22f2c8255d67d311835d1a77452e34e5fe433c4ff";
 
 export default function LoginForm() {
     const [input, setInput] = useState("");
@@ -35,6 +35,7 @@ export default function LoginForm() {
             // Redirect to home
             window.location.href = import.meta.env.BASE_URL;
         } else {
+            alert(`Debug Info:\nInput: '${input}'\nHash: ${hash}\nTarget: ${TARGET_HASH}`);
             setError(true);
         }
     };
@@ -67,7 +68,7 @@ export default function LoginForm() {
                     Accedi
                 </button>
             </form>
-            <p className="version-tag">v1.1 - Secure</p>
+            <p className="version-tag">v1.2 - Debugging</p>
         </div>
     );
 }
